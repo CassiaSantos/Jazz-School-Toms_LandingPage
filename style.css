@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #000000;
+    background-color: bisque;
+}
+
+a{
+    border: 1px;
+    text-decoration: none;
+}
+
+a.nav-bar {
+    padding: 10px;
+}
+
+.button-orange {
+    background-color: rgb(255, 103, 48);
+    color: #000000;
+    padding: 6px 10px;
+    border: none;
+    /* box-shadow: 0 0 10px hsl(0, 0%, 0%); */
+}
+
+span {
+    color: rgb(255, 103, 48);
+}
+
+.cards-cursos{
+
+}
+
+.nome-curso{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.email{
+    background-color: #ffffff;
+    border: none;
+    padding: 8px;
+}
