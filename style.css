@@ -1,43 +1,230 @@
+/* Normalização simples: */
 *{
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
-    color: #000000;
-    background-color: bisque;
+    /* border: 1px solid red; */
+}
+
+/* Corres do projeto: */
+:root{
+    --color-primary: #ed4d1b;
+    --color-secondary: #ff9a3c;
+    --black: #000000;
+    --withe: #ffffff;
+    --background: linear-gradient(90deg, #ffe701 0%, #fff2e6 100%);
+}
+
+body{
+    background-color: var(--background);
+    padding: 0 1rem; /*espaçamento na lateral da página*/
+}
+
+/* Cabeçalho do página: */
+header, .hero-section, .courses-section, footer{
+    border-width: 0 1px 1px 1px;
+    border-style:solid;
+    border-color: var(--black);
+    padding: 1.25rem;
+}
+
+header img{
+    display: block;
+    margin: 1rem auto;
+}
+
+header nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divisão do conteúdo em 2 colunas */
 }
 
 a{
-    border: 1px;
     text-decoration: none;
 }
 
-a.nav-bar {
-    padding: 10px;
+nav a {
+    color: var(--black);
+    font-size: 1.25rem;
+    padding: .5rem;
 }
 
-.button-orange {
-    background-color: rgb(255, 103, 48);
-    color: #000000;
-    padding: 6px 10px;
-    border: none;
-    /* box-shadow: 0 0 10px hsl(0, 0%, 0%); */
+/* Alinhar à direita itens do lado esquerda */
+header nav a:nth-child(2n-1){
+    text-align:right;
 }
 
-span {
-    color: rgb(255, 103, 48);
+.orange-button {
+    background-color: var(--color-primary);
+    color: var(--black);
+    font-size: 1.25rem;
+    padding: .75rem 1rem;
+    border: 2px solid var(--black);
+    box-shadow: 4px 4px 0 var(--black);
+    display: block;
+    max-width: 14rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Sessão Principal da página */
+.hero-section{
+    padding-right: 0; /* a imagem ficará sempre ao lado direito*/
+    padding-bottom: 16rem;
+}
+
+.hero-section img{
+    display: block;
+    margin: 1.25rem, 0, 0, auto;
+    max-width: 100%;
+}
+
+h1{
+    font-size: 2.5rem;
+    line-height: 105%;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    line-height: 25px;
+    padding-right: 1.25rem;
+}
+
+/* Os detalhes no texto não possuem finalidade na página a não ser estilização, dessa maneira, serão implementados pelo CSS com pseudoseletores: */
+.hero-section .orange-button{
+    position: relative; /* Para ser possível utilizar seu pseudoseletor com a posição absoluta*/
+}
+
+.hero-section .orange-button::after{
+    content: ' ';
+    background: url("https://raw.githubusercontent.com/CassiaSantos/Jazz-School-Toms_LandingPage/6b57cbbd9b5fc964a6c0e5077890545d6c35fed3/img/arrow-curve.svg");
+    position: absolute;
+    width: 132px;
+    height: 48px;
+    top: 5rem;
+    right: -1rem;
+}
+
+.decoration{
+    display: block;
+    position: relative;
+}
+
+.decoration::after{
+    content: ' ';
+    background: url("https://raw.githubusercontent.com/CassiaSantos/Jazz-School-Toms_LandingPage/6b57cbbd9b5fc964a6c0e5077890545d6c35fed3/img/three-dashes.svg");
+    position: absolute;
+    height: 36px;
+    width: 40px;
+    top: -0.77rem;
+}
+
+.courses-section{
+    padding-bottom: 7rem;
 }
 
 .cards-cursos{
+    display: flex;
+    flex-direction: column;
+    align-items: start; /*ficarão alinhados à esquerda*/
+    gap: 1.25rem;
+    margin-top: -8rem; /* margem negativa fará os cars subirem*/
+    margin-bottom: 4rem;
+}
 
+/* Estilização interna do card */
+.card{
+    background-color: var(--color-primary);
+    border: 2px;
+    border-style: solid;
+    box-shadow: 4px 4px 0 var(--black);
+    max-width: 17rem;
+    padding: 2rem 0 0 2rem;
+}
+
+.card:nth-child(2n){
+    background-color: var(--color-secondary);
+    align-self: end;
 }
 
 .nome-curso{
-    font-size: 16px;
+    display: block;
+    font-size: 1.5rem;
     font-weight: bold;
+    margin: 1rem 0;
 }
 
-.email{
+.card a{
+    display: block;
+    margin: 3rem 0 0 auto;
+    width: fit-content; /* largura se ajusta ao conteúdo, e então ele fica no canto */
+}
+
+footer{
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.25rem 4rem;
+}
+
+footer img{
+    display: block;
+    margin: 1rem auto;
+}
+
+footer nav a{
+    display: block;
+    padding-left: 0;
+    padding: 1.25rem;
+}
+
+.newsletter-form{
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+    text-align: center;
+}
+.newsletter-form .email{
     background-color: #ffffff;
-    border: none;
-    padding: 8px;
+    display: block;
+    border-style: solid;
+    box-shadow: 4px 4px 0 var(--black);
+    padding: .5rem;
+    font-size: 1.25rem;
+    width: 90%;
+}
+
+
+/* Classes úteis: */
+.mt-1{
+    margin-top: 1rem;
+}
+
+.mt-2{
+    margin-top: 2rem;
+}
+
+.mb-1{
+    margin-bottom: 1rem;
+}
+
+.mb-2{
+    margin-bottom: 2rem;
+}
+
+.text-primary{
+    color: var(--color-primary);
+}
+
+.mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center{
+    text-align: center;
 }
