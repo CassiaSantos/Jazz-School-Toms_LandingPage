@@ -17,33 +17,37 @@
         
         <!-- CABEÇALHO -->
         <header>
-            <!-- Logo -->
-            <img src="https://raw.githubusercontent.com/CassiaSantos/Jazz-School-Toms_LandingPage/6b57cbbd9b5fc964a6c0e5077890545d6c35fed3/img/logo.svg" alt="Tom's Jazz School Logo">
-            
-            <!-- Nav bar -->
-            <nav class="mt-1 mx-auto">
-                <a class="nav-bar" href="">Início</a>
-                <a class="nav-bar" href="">Cursos</a>
-                <a class="nav-bar" href="">Eventos</a>
-                <a class="nav-bar" href="">Contato</a>
-            </nav>
-
-            <!-- Botão -->
-            <a class="orange-button mx-auto mt-1 mb-1">Inscreva-se</a><!--Usar tag a ao invés de button porque poderia ser o acesso para uma página-->
-        
+            <div class="container">
+                <!-- Logo -->
+                <img src="https://raw.githubusercontent.com/CassiaSantos/Jazz-School-Toms_LandingPage/6b57cbbd9b5fc964a6c0e5077890545d6c35fed3/img/logo.svg" alt="Tom's Jazz School Logo">
+                
+                <!-- Nav bar -->
+                <nav>
+                    <a class="nav-bar" href="">Início</a>
+                    <a class="nav-bar" href="">Cursos</a>
+                    <a class="nav-bar" href="">Eventos</a>
+                    <a class="nav-bar" href="">Contato</a>
+                </nav>
+    
+                <!-- Botão -->
+                <a class="orange-button mt-1 mb-1">Inscreva-se</a><!--Usar tag a ao invés de button porque poderia ser o acesso para uma página-->
+            </div>
         </header>
       
         <main>
 
             <!-- SESSÃO PRINCIPAL -->
             <section class="hero-section">
-                <div>
+                <div class="container row-reverse">
                     <img src="https://raw.githubusercontent.com/CassiaSantos/Jazz-School-Toms_LandingPage/6b57cbbd9b5fc964a6c0e5077890545d6c35fed3/img/hero-img.svg" alt="Banda de Jazz tocando">
-                    <h1 class="mt-1 mb-1">Crie algo <span class="text-primary decoration">impactante</span> com música</h1>
-                    <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <a class="orange-button mx-auto">Comece agora</a>
+                    <div>
+                        <h1 class="mt-1 mb-1">Crie algo <span class="text-primary decoration">impactante</span> com música</h1>
+                        <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a class="orange-button">Comece agora</a>
+                    </div>
                 </div>
             </section>
+            
 
             <!-- SESSÃO DE CURSOS -->
             <section class="courses-section">
@@ -92,7 +96,7 @@
 
                 <div>
                     <h2 class="text-center mb-2">E <span class="text-primary">vários</span> outros!</h2>
-                    <a class="orange-button mx-auto">Conhecer cursos</a>
+                    <a class="orange-button">Conhecer cursos</a>
                 </div>
                 
             </section>
@@ -100,29 +104,31 @@
 
         <!-- RODAPÉ -->
         <footer>
-            <!-- Logo -->
-            <div>
-                <img src="https://raw.githubusercontent.com/CassiaSantos/Jazz-School-Toms_LandingPage/6b57cbbd9b5fc964a6c0e5077890545d6c35fed3/img/logo.svg" alt="Tom's Jazz School Logo">
-                <p class="text-center mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            
-            <!-- Nav bar -->
-            <nav class="text-center">
-                <a class="nav-bar" href="">Início</a>
-                <a class="nav-bar" href="">Cursos</a>
-                <a class="nav-bar" href="">Eventos</a>
-                <a class="nav-bar" href="">Contato</a>
-            </nav>
-            
-            <!-- cadastro de e-mail -->
-            <div class="newsletter-form">
-                <form method="post" action="">
-                    <label for="email">Receba materiais gratuitos no seu e-mail</label>
-                    <input class="email mx-auto" type="email" name="email" id="email" placeholder="Digite seu e-mail aqui">
-                    
-                    <label for="submit"></label>
-                    <input class="orange-button mx-auto mt-1 mb-2" type="submit" name="enviar" value="Quero receber">                    
-                </form>
+            <div class="container">
+                <!-- Logo -->
+                <div class="about-column">
+                    <img src="https://raw.githubusercontent.com/CassiaSantos/Jazz-School-Toms_LandingPage/6b57cbbd9b5fc964a6c0e5077890545d6c35fed3/img/logo.svg" alt="Tom's Jazz School Logo">
+                    <p class="mb-1 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                
+                <!-- Nav bar -->
+                <nav>
+                    <a class="nav-bar" href="">Início</a>
+                    <a class="nav-bar" href="">Cursos</a>
+                    <a class="nav-bar" href="">Eventos</a>
+                    <a class="nav-bar" href="">Contato</a>
+                </nav>
+                
+                <!-- cadastro de e-mail -->
+                <div class="newsletter-form">
+                    <form method="post" action="">
+                        <label for="email">Receba materiais <span class="text-primary">gratuitos</span> no seu e-mail</label>
+                        <input class="email mx-auto mt-1" type="email" name="email" id="email" placeholder="Digite seu e-mail aqui">
+                        
+                        <label for="submit"></label>
+                        <input class="orange-button mt-1 mb-2" type="submit" name="enviar" value="Quero receber">                    
+                    </form>
+                </div>
             </div>
         </footer>
 
